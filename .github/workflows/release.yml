@@ -23,7 +23,7 @@ jobs:
           zip -r artifacts/desqueezer.zip \
             Desqueezer.lrdevplugin/Info.lua \
             Desqueezer.lrdevplugin/Main.lua \
-            Desqueezer.lrdevplugin/scripts/desqueezer.sh
+            Desqueezer.lrdevplugin/scripts/desqueeze.bat
 
       - name: Determine next version by date
         id: tag
