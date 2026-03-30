@@ -42,7 +42,7 @@ local function callDesqueezeBashScript(squeezeFactor, axis)
 			return
 		end
 
-		local scriptPath = LrPathUtils.child(_PLUGIN.path, "scripts/desqueezer.sh")
+		local scriptPath = LrPathUtils.child(_PLUGIN.path, "scripts/desqueeze.bat")
 
 		if not LrFileUtils.exists(scriptPath) then
 			LrDialogs.message("Error", "The bash script was not found.", "critical")
@@ -52,14 +52,13 @@ local function callDesqueezeBashScript(squeezeFactor, axis)
 
 		LrDialogs.showBezel("Desqueezing photos… please wait")
 
-		local command = '/bin/bash "'
-			.. scriptPath
-			.. '" '
-			.. squeezeFactor
-			.. " "
-			.. axis
-			.. " "
-			.. table.concat(dngPaths, " ")
+		local command = scriptPath
+		.. ' '
+		.. squeezeFactor
+		.. ' '
+		.. axis
+		.. ' '
+		.. table.concat(dngPaths, " ")
 		outputToLog("Running command: " .. command)
 
 		local result = LrTasks.execute(command)
@@ -82,7 +81,7 @@ local function showCustomDialogWithTransform()
 		local f = LrView.osFactory()
 		local props = LrBinding.makePropertyTable(context)
 
-		props.selectedRatio = "1.5"
+		props.selectedRatio = "1.33"
 		props.verticalMode = false
 
 		local ratioRow = f:row({
