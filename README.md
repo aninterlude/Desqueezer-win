@@ -70,7 +70,6 @@ You should now see **"Adrian Kulik Anamorphic Utilities → Desqueezer"** as an 
 
 - [ ] **Update to the main**  
        Impliment the original repo features
-       _(Currently hardcoded to `1.5x`, suitable for lenses like Blazar Remus and Atlas Mercury.)_
 
 - [ ] **Checks**  
        Yep. It's unsafe now.  
