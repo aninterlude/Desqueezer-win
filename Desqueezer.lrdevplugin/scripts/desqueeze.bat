@@ -1,11 +1,15 @@
 setlocal ENABLEDELAYEDEXPANSION
 
-set logout="C:\Users\rsar\AppData\Roaming\Adobe\Lightroom\Modules\Desqueezer.lrdevplugin\scripts\output.txt"
+:: Set logs directory
+set logout="%appdata%\Adobe\Lightroom\Modules\Desqueezer.lrdevplugin\scripts\output.txt"
 
+:: Set variables
 set squeezeFactor=%1
 set axis="%2"
+:: I dunno, but shift /2 somehow doesn't work
 SHIFT
 SHIFT
+
 echo ----------NEW RUN--------- > %logout%
 echo allargs=%* >> %logout%
 
@@ -15,6 +19,7 @@ echo squeezeFactor=%squeezeFactor% >> %logout%
 echo axis=%axis% >> %logout%
 echo scale=%scale% >> %logout%
 
+:: command under (line 23) do what shift in linux do. But windows is DUMB, so had to workaround it
 set "_args=%*" 
 for %%f in (%_args%) do (
 	IF EXIST %%f (
