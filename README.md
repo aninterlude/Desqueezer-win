@@ -4,6 +4,8 @@
 
 **❗Please note: This plugin irreversibly changes the metadata. Please backup your photos before use.**
 
+**❗FORKED NOTE: There's no implemented checks. Sh version cut out. Logs are enabled to write in scripts directory (file recreates at every run)**
+
 ![Animated logotype](https://raw.githubusercontent.com/adriankulik/Desqueezer/aacdfea07d6af846b4a4357e2cb841df042e3236/assets/Desqueezer_logo.gif)
 
 ---
