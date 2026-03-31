@@ -23,7 +23,7 @@ echo scale=%scale% >> %logout%
 set "_args=%*" 
 for %%f in (%_args%) do (
 	IF EXIST %%f (
-		echo '----| file=%%f' >> %logout%
+		echo '---- file=%%f' >> %logout%
 		exiftool -DefaultScale=%scale% -overwrite_original %%f >> %logout%
 	)
 	set "_args=!_args:*%1 =!"
